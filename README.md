@@ -43,7 +43,7 @@ See `vendor/` directory.
       // { template: '...', into: '...' }
     ],
     events: {
-      'keyup .question-label, change .question-label: function(e) {
+      'keyup .question-label, change .question-label': function(e) {
          // Do something, the context is still the MiniView instance
          console.log(this.state);
       }
