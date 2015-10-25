@@ -53,7 +53,8 @@ Inside your `MiniView` methods or events handler and the `init` constructor func
      init: function(props) {
        this.state.collections = props.collection;
        console.log(this.state); // Data passed onto the subviews on rendering.
-     },
+       this.renderQuestions();
+},
     insert: [
       { template: 'answers-types', into: '.answers-types' },
       // { template: '...', into: '...' }
@@ -291,3 +292,7 @@ Answer.createEmpty = (function() {
 });
 
 ```
+
+## License
+
+WTFPL
