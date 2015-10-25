@@ -9,8 +9,21 @@ See `vendor/` directory.
 
 ## Create a view
 
-We use `MiniView.Extend();` to create a view.
+We use `MiniView.Extend();` to create a view. Read the [documentation](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L8).
 A view has a `state`, a `init` constructor function, `events`, `methods` which are helpers accessible everywhere in the view (not the template!) and `insert`s which are declarative partials insertions.
+
+## Methods
+
+Inside your `MiniView` methods or events handler and the `init` constructor function you have access to a few methods to help you along your way.
+
+- `render()`, renders a subview. [render documentation](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L133).
+- `destroy()`, destroys a rendered element or subview. [destroy documentation](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L182).
+- `refreshView`, like `render` but for all views declared through the `insert` property. [source code](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L117)
+- `destroyView`, like `destroy` but for all views declared through the `insert` property. [source code](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L123)
+- `attachEvents`, sets all the events, is called once when rendering the view the first time. [source code](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L238)
+- `detachEvents`, unsets all the events, is called automaticaly when destroying the view. [source code](https://github.com/gabriel-dehan/miniview/blob/master/miniview.js#L257)
+
+## Simple example
 
 ```html
 <div id="questionnaire">
